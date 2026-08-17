@@ -1,0 +1,115 @@
+##
+Prepared the MEPS 2023 dataset for analysis in SPSS using reproducible syntax. 
+Variable and value labels were assigned using the MEPS codebook, measurement levels were defined,
+and non-substantive response codes such as “Inapplicable,” “Refused,” and “Don’t Know” were designated as user-missing where appropriate.
+This step is crucial because in cases where it's a recurring survey, this syntax can be shared with other analysts, so it is not done from scratch everytime
+
+
+* MEPS 2023 Healthcare Utilization Analysis *
+
+VARIABLE LABELS
+ DUPERSID  'PERSON ID (DUID + PID)'
+ AGE23X    'AGE AS OF 12/31/23 (EDITED/IMPUTED)'
+ SEX       'SEX'
+ RACETHX   'RACE/ETHNICITY (EDITED/IMPUTED)'
+ POVCAT23  'FAMILY INC AS % OF POVERTY LINE - CATEGORICAL'
+ INSCOV23  'HEALTH INSURANCE COVERAGE INDICATOR 2023'
+ RTHLTH53  'PERCEIVED HEALTH STATUS - RD 5/3'
+ HAVEUS42  'DOES PERSON HAVE USC PROVIDER-R4/2'
+ DLAYCA42  'DELAY MED CARE FOR COST-R4/2'
+ AFRDCA42  'COULD NOT AFFORD MED CARE-R4/2'
+ OBTOTV23  '# OFFICE-BASED PROVIDER VISITS 2023'
+ ERTOT23   '# EMERGENCY ROOM VISITS 2023'
+ IPDIS23   '# HOSPITAL DISCHARGES 2023'
+ TOTEXP23  'TOTAL HEALTH CARE EXP 23'
+ PERWT23F  'FINAL PERSON WEIGHT, 2023'.
+
+
+* VALUE LABELS 
+
+VALUE LABELS
+
+ VALUE LABELS SEX
+ 1 'Male'
+ 2 'Female'.
+
+VALUE LABELS RACETHX
+ 1 'Hispanic'
+ 2 'Non-Hispanic White Only'
+ 3 'Non-Hispanic Black Only'
+ 4 'Non-Hispanic Asian Only'
+ 5 'Non-Hispanic Other Race or Multiple Race'.
+
+VALUE LABELS POVCAT23
+ 1 'Poor/Negative'
+ 2 'Near Poor'
+ 3 'Low Income'
+ 4 'Middle Income'
+ 5 'High Income'.
+
+VALUE LABELS INSCOV23
+ 1 'Any Private'
+ 2 'Public Only'
+ 3 'Uninsured'.
+
+VALUE LABELS RTHLTH53
+ -8 "Don't Know"
+ -7 'Refused'
+ -1 'Inapplicable'
+ 1 'Excellent'
+ 2 'Very Good'
+ 3 'Good'
+ 4 'Fair'
+ 5 'Poor'.
+
+VALUE LABELS HAVEUS42
+ -8 "Don't Know"
+ -7 'Refused'
+ -1 'Inapplicable'
+ 1 'Yes'
+ 2 'No'.
+
+VALUE LABELS DLAYCA42
+ -8 "Don't Know"
+ -7 'Refused'
+ -1 'Inapplicable'
+ 1 'Yes'
+ 2 'No'.
+
+VALUE LABELS AFRDCA42
+ -8 "Don't Know"
+ -7 'Refused'
+ -1 'Inapplicable'
+ 1 'Yes'
+ 2 'No'.
+
+
+*USER-DEFINED MISSING VALUES.
+
+MISSING VALUES
+ AGE23X (-1)
+ RTHLTH53 HAVEUS42 DLAYCA42 AFRDCA42 (-8,-7,-1).
+
+
+*MEASUREMENT LEVELS 
+
+VARIABLE LEVEL
+ DUPERSID (NOMINAL)
+ AGE23X (SCALE)
+ SEX (NOMINAL)
+ RACETHX (NOMINAL)
+ POVCAT23 (ORDINAL)
+ INSCOV23 (NOMINAL)
+ RTHLTH53 (ORDINAL)
+ HAVEUS42 (NOMINAL)
+ DLAYCA42 (NOMINAL)
+ AFRDCA42 (NOMINAL)
+ OBTOTV23 (SCALE)
+ ERTOT23 (SCALE)
+ IPDIS23 (SCALE)
+ TOTEXP23 (SCALE)
+ PERWT23F (SCALE).
+
+EXECUTE.
+
+
