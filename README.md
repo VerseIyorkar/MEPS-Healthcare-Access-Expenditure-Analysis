@@ -29,3 +29,10 @@ Statistical analyses were conducted in SPSS based on the type of variables being
 ## SPSS Syntax
 The SPSS syntax used for data preparation and statistical analysis is included in this repository to document the analytical workflow and support reproducibility.
 The repository includes separate SPSS syntax files for data preparation and statistical analysis. Data_Preparation.sps documents variable selection, labeling, missing-value handling, measurement levels, and data validation. Statistical_Analysis.sps contains the syntax used to reproduce the final chi-square, Welch ANOVA with Games-Howell post-hoc comparisons, and Spearman correlation analyses.
+
+
+## OUTPUT
+View full project and outputs here https://verseiyorkar.carrd.co/#spss
+
+
+
